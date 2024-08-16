@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Project
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - my-network
+
+  springboot1:
+    build:
+      context: C:\Users\vijay\Downloads\QuizApp
+    container_name: springboot_app1
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/Project?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mysql
+    networks:
+      - my-network
+  
+  springboot2:
+    build:
+      context: C:\Users\vijay\Downloads\QuizApp
+    container_name: springboot_app2
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/Project?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    ports:
+      - "8082:8080"
+    depends_on:
+      - mysql
+    networks:
+      - my-network
+
+  react:
+    image: quizreactimage2
+    container_name: react_app
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+  
+  nginx:
+    image: nginx:latest
+    container_name: nginx_load_balancer
+    ports: 
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - my-network
+    depends_on:
+      - springboot1
+      - springboot2
+
+volumes:
+  mysql-data:
+
+networks:
+  my-network:
+    driver: bridge  
+    

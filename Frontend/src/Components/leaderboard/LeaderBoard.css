@@ -1,0 +1,145 @@
+.leaderboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e1eedd;
+  font-family: "Delius", cursive;
+  min-height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.top-image {
+  height: 70px;
+  border-radius: 10px;
+  transition: transform 0.6s ease, box-shadow 0.7s ease;
+}
+
+.leaderboard-header {
+  font-family: 'Arial Rounded MT', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1; /* Allow the header to take up remaining space */
+}
+
+.home-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #183a1d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #244b2a;
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter label {
+  font-weight: bold;
+}
+
+.filter select {
+  padding: 8px;
+  
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.table {
+  width: 80%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+  border-radius: 10px; 
+  overflow: hidden; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.table thead th {
+  border-bottom: 2px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  background-color: #f0a04b;
+  color: #ffffff;
+}
+
+.table tbody td {
+  
+  padding: 12px;
+  background-color: #fefbe9;
+  text-align: center; 
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .filter select {
+    width: 100%;
+  }
+
+  .table {
+    width: 100%;
+    border-radius: 10px; 
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leaderboard-header {
+    margin: 10px 0; 
+  }
+
+  .home-button {
+    align-self: flex-end; 
+  }
+}

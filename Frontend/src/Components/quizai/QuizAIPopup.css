@@ -1,0 +1,85 @@
+.quizai-popup-container {
+  position: relative;
+  height: 100vh; /* Full height of viewport */
+}
+
+.quizai-popup-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the container */
+  z-index: -1; /* Place video behind the overlay */
+}
+
+.quizai-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .quizai-popup {
+    background-color: #fae5df;
+    color: #12174F;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border:2px solid #EC7966;
+  }
+  
+  .quizai-popup h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .quizai-popup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fabfb4;
+    color: #12174F;
+    border: none;
+    font-size: 1rem;
+  }
+  .quizai-popup-input::placeholder {
+    color: #12174f;
+    opacity: 1; /* Firefox */
+  }
+  
+  .quizai-popup-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .quizai-popup-submit-button, .quizai-popup-close-button {
+    background-color: #303179;
+    color: #faa495;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quizai-popup-submit-button:hover {
+    background-color: #12174f;;
+  }
+  
+  .quizai-popup-close-button:hover {
+    background-color: #e53935;
+  }
+  

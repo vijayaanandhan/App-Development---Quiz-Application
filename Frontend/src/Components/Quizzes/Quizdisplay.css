@@ -1,0 +1,362 @@
+.quiz-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 1rem;
+  background-color: #fefbe9;
+  transition: margin-left 0.3s ease;
+  color: #333;
+}
+
+.sidebar-toggle-icon {
+  font-size: 2rem;
+  color: #4c51bf;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
+.quiz-page-title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+  color: #E7AA3F;
+  font-family: "Delius", cursive;
+}
+
+.quiz-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.quiz-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
+
+.quiz-card:hover {
+  box-shadow: rgba(255, 255, 255, 0.1) 0 15px 15px;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.quiz-card:active {
+  transform: translateY(0) scale(1);
+}
+
+.quiz-card {
+  background-color: #e1eedd;
+  font-family: "Delius", cursive;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  height: 310px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.6s ease, box-shadow 0.7s ease;
+  color: #333;
+}
+
+.quiz-card-image {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.quiz-card-content {
+  padding: 0.5rem 0;
+}
+
+.quiz-card-title {
+  color: #183a1d;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-card-description {
+  color: #4B1918;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+  font-family: "Play", sans-serif; ;
+}
+
+.quiz-card-footer {
+  padding: 0.5rem 0;
+}
+
+.quiz-card-button {
+  background: #183a1d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-card-button:hover {
+  background: #218838;
+}
+
+@media (max-width: 900px) {
+  .quiz-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .quiz-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-brand {
+  margin-bottom: 2rem;
+}
+
+.sidebar-brand h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar-menu li {
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.sidebar-link:hover {
+  background-color: #373c77;
+}
+
+.sidebar-icon {
+  font-size: 1.2rem;
+}
+
+.sidebar-text {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.sidebar-badge {
+  background-color: #e53e3e;
+  color: white;
+  border-radius: 12px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.sidebar-teams {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.sidebar-teams h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-teams ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-teams li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-teams a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-teams a:hover {
+  background-color: #373c77;
+}
+
+.sidebar-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-profile-icon {
+  font-size: 1.5rem;
+}
+
+.sidebar-profile-name {
+  margin-left: 0.5rem;
+}
+
+.side-bo {
+  margin-top: 200px;
+}
+
+.navbar-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  background-color: #f4a046;
+  border-radius: 7px;
+  height: 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar-display-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-display-item {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
+.navbar-display-button {
+  background-color: #edca77;
+  color: #0B180F;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.navbar-display-button:hover {
+  background-color: #f1c55e;
+  color: #0B180F;
+}
+
+.no-quiz-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  font-family: "Delius", cursive;
+}
+
+.quiz-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.quiz-popup {
+  background-color: #e1eedd;
+  color: #183a1d;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 430px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Play", sans-serif;
+}
+
+.quiz-popup h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.quiz-popup-button {
+  background-color: #183a1d;
+  color: #e1eedd;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-popup-button:hover {
+  background-color: #45a049;
+}
+
+.quiz-popup-close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-popup-close-button:hover {
+  background-color: #e53935;
+}

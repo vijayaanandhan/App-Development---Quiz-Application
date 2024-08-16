@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body::-webkit-scrollbar {
+    font-family: 'Raleway', sans-serif;
+    width: 0 !important;
+}
+
+.background-wrapper {
+    background-color: #fae5df;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    overflow: hidden; /* Ensure no overflow is visible */
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+
+.leadericon {
+    font-size: larger;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    margin-top: 30px;
+    background-color: #ed7966;
+    border-radius: 7px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+}
+
+.navbar-image {
+    height: 70px;
+    border-radius: 10px;
+    transition: transform 0.6s ease, box-shadow 0.7s ease;
+    margin-left: 45px;
+}
+
+.InsightQuest{
+    margin-right: 76vh;
+    margin-left: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 30px;
+    color: #ffffff;
+}
+
+.navbar-image:hover {
+    box-shadow: rgba(35, 35, 35, 0.351) 0 15px 15px;
+    transform: translateY(-3px) scale(1.02);
+}
+
+.navbar-image:active {
+    box-shadow: #1e231c;
+    transform: translateY(0);
+}
+
+.navbar-icon {
+    font-size: 1.2rem;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.thirdBigcc {
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 80%;
+    cursor: pointer;
+    transition: transform 0.6s ease, box-shadow 0.7s ease;
+}
+
+.thirdBigcc:hover {
+    box-shadow: rgba(35, 35, 35, 0.351) 0 15px 15px;
+    transform: translateY(-3px) scale(1.02);
+}
+
+.thirdBigcc:active {
+    transform: translateY(0) scale(1);
+}
+
+.secondBig {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 450px;
+}
+
+.secondBig01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
+    height: 250px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Delius", cursive;
+}
+
+.secondBig01 h1 {
+    font-family: "Delius", cursive;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #141850;
+    margin: 0;
+}
+
+.secondBig01 p {
+    font-size: 1.2em;
+    color: #303179;
+    margin: 0;
+}
+
+.thirdBig {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    align-items: center;
+}
+
+.thirdBigcc div {
+    flex: 1;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f5cac2;
+    height: 300px;
+    text-align: center;
+}
+
+.thirdBig0101, .thirdBig0201, .thirdBig0301, .thirdBig0401, .thirdBig0501 {
+    border-radius: 10px 0 0 10px;
+    background-color: #3498db;
+}
+
+.thirdBig0102, .thirdBig0202, .thirdBig0302, .thirdBig0402, .thirdBig0502 {
+    border-radius: 0 10px 10px 0;
+    background-color: #3498db;
+}
+
+.thirdBig0101 h1,
+.thirdBig0202 h1,
+.thirdBig0301 h1,
+.thirdBig0402 h1,
+.thirdBig0501 h1 {
+    font-family: 'Arial Rounded MT', Arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.thirdBig0101 h3,
+.thirdBig0202 h3,
+.thirdBig0301 h3,
+.thirdBig0402 h3,
+.thirdBig0501 h3 {
+    font-family: 'Arial Rounded MT', Arial, sans-serif;
+    font-size: 1.13em;
+    color: #373737;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.thirdBig0102 img, .thirdBig0201 img, .thirdBig0302 img, .thirdBig0401 img, .thirdBig0501 img {
+    border-radius: 10px;
+    width: 400px;
+}
+
+.footer {
+    background-color: #303179;
+    color: #f5cac2;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 0 15px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.footer-section h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f5cac2;
+    border-bottom: 2px solid ;
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.footer-section a {
+    color: #fae5df;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+    border-top: 2px solid #fae5df;
+    padding-top: 15px;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #f5cac2;
+}
+
+/* Added styles for the navbar buttons */
+.navbar-button {
+    background-color: #f5cac2;
+    color: #303179;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.navbar-button:hover {
+    background-color: #303179;
+    color: #f5cac2;
+}
+
+.homeContent {
+    position: absolute;
+
+}
+
+.homeContent p{
+    font-size: 24px;
+
+}
+
+/* HomeComponent.css */
+
+/* Add this for quiz AI popup */
+.quizai-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quizai-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .quizai-popup h2 {
+    margin-bottom: 15px;
+  }
+  
+  .quizai-popup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .quizai-popup-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .quizai-popup-submit-button, .quizai-popup-close-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .quizai-popup-submit-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .quizai-popup-close-button {
+    background-color: #ccc;
+    color: black;
+  }
+
+  /* Celebration Popup Styles */
+.celebration-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s ease-in-out; /* Increased duration and smoother transition */
+  }
+  
+  .celebration-popup {
+    background: #E1EEDD;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 700px;
+    height: 380px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #183a1d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center;     /* Horizontally center the content */
+}
+
+  
+  .celebration-popup h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #cf0000; /* Red color for "Let's celebrate..." */
+    font-family: "Delius", cursive;
+    font-weight: bold;
+  }
+  
+  .celebration-popup p {
+    font-size: 45px;
+    color: #008000; /* Green color for "Happy Independence Day!" */
+    font-family: "Chathura", sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Hidden state for the popup */
+  .celebration-popup-overlay.hidden {
+    opacity: 0; /* Fades out completely */
+    pointer-events: none; /* Prevents interaction after fade-out */
+  }
+  
+.independence{
+    position: absolute;
+}

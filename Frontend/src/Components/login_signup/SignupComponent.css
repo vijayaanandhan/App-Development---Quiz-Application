@@ -1,0 +1,75 @@
+.S-outerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #e1eedd;
+}
+
+.S-innerdiv {
+  background-color: #f1feb9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  position: absolute;
+  opacity: 0.95;
+}
+
+.S-innerdiv01 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.S-innerdiv02 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.S-imgsrc {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.S-outerform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.S-input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #e1eedd;
+  font-size: 16px;
+  color:  #18381d;
+  border: none;
+  border-radius: 8px;
+}
+
+.S-button-63 {
+  background-color: #f0a04b ;
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  color: #FFFFFF;
+  font-family: Phantomsans, sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.S-button-63:active,
+.S-button-63:hover {
+  outline: none;
+}

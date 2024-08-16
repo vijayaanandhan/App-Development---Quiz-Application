@@ -1,0 +1,152 @@
+.custom-profile-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fae5df;
+  font-family: "Delius", cursive;
+  min-height: 100vh;
+}
+
+.custom-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.custom-profile-header {
+  margin: 0;
+  font-size: 40px;
+  text-align: center; 
+}
+
+.custom-user-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 130px; 
+}
+
+.custom-username {
+  margin: 0;
+  font-size: 18px;
+  margin-right:800px;
+}
+
+.custom-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-home-button,
+.custom-logout-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-home-button {
+  background-color: #ed7966;
+  color: #fff;
+}
+
+.custom-home-button:hover {
+  background-color: #f06d59;
+}
+
+.custom-logout-button {
+  background-color: #303179;
+  color: #fff;
+}
+
+.custom-logout-button:hover {
+  background-color: #484993;
+}
+
+.custom-results-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-results-header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.custom-filter-section {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.custom-filter-section label {
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.custom-filter-section select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.custom-table-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.custom-results-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #141850; 
+}
+
+.custom-results-table thead th {
+  border-bottom: 2px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  background-color: #141850;
+  color: #f5cac2;
+}
+
+.custom-results-table tbody td {
+  border: 1px solid #141850;
+  padding: 12px;
+  background-color: #f5cac2;
+  text-align: center;
+}
+
+.custom-results-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.custom-results-table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .custom-filter-section {
+    flex-direction: column;
+  }
+
+  .custom-filter-section select {
+    width: 100%;
+  }
+
+  .custom-results-table {
+    width: 100%;
+    border-radius: 3px;
+  }
+}
